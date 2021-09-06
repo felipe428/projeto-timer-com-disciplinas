@@ -1,0 +1,13 @@
+<h1>Timer</h1>
+
+<h2>Informe o intervalo de tempo do timer (em segundos): </h2>
+<input class="form-control" type="text" [(ngModel)]="intervalo"/>
+<br>
+
+<button (click)="timer.start(this.intervalo * 1000)">Começar</button>
+<button (click)="timer.stop()">Parar</button>
+<button (click)="timer.zero()">Zerar</button>
+
+<br><br>
+
+<b>{{timer.getCount()}}s</b>

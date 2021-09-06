@@ -2,7 +2,38 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class TimerService {
+  private timer: any;
+  private counter = 0;
 
-  constructor() { }
+  constructor() {}
 
+  start(ms: number) {
+    if (!this.timer) {
+      if (ms) {
+        this.timer = setInterval(() => {
+          this.counter++;
+        }, ms);
+      }
+    }
+  }
+  stop() {
+    if (this.timer) {
+      clearInterval(this.timer);
+      this.timer = null;
+    }
+  }
+  zero() {
+    if (this.timer) {
+      clearInterval(this.timer);
+      this.timer = null;
+      this.counter = 0;
+    } else {
+      clearInterval(this.timer);
+      this.timer = null;
+      this.counter = 0;
+    }
+  }
+  getCount() {
+    return this.counter;
+  }
 }
