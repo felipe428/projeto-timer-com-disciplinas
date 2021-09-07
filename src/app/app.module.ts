@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 
-import { HomeComponent } from './home/home.component';
 import { TimerComponent } from './timer/timer.component';
 import { DisciplinasComponent } from './disciplinas/disciplinas.component';
 
@@ -18,7 +17,6 @@ import { DisciplinasService } from './disciplinas.service';
     BrowserModule,
     FormsModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent },
       { path: 'timer', component: TimerComponent },
       { path: 'disciplinas', component: DisciplinasComponent }
     ])
