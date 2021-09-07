@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DisciplinasService } from '../disciplinas.service';
 
 @Component({
   selector: 'app-disciplinas',
@@ -6,10 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./disciplinas.component.css']
 })
 export class DisciplinasComponent implements OnInit {
+  constructor(public disciplinas: DisciplinasService) {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
