@@ -10,7 +10,49 @@
 <ul>
   <li *ngFor="let disci of this.disciplinas.getList(); index as i">
     {{disci.title}}
-    <button (click)="this.disciplinas.remove(i)" style="cursor: pointer">
+    <button (click)="this.disciplinas.remove(i)">
+      -
+    </button>
+  </li>
+
+  <li #mat1>
+    Negócios e Marketing e Eletrônicos
+    <button (click)="this.disciplinas.remove(mat1.value); title.value=''">
+      -
+    </button>
+  </li>
+
+  <li #mat2>
+    Desenvolvimento para Servidores II
+    <button (click)="this.disciplinas.remove(mat1.value); title.value=''">
+      -
+    </button>
+  </li>
+
+  <li mat3>
+    Inglês V
+    <button (click)="this.disciplinas.remove(mat1.value); title.value=''">
+      -
+    </button>
+  </li>
+
+  <li mat4>
+    Projeto de Prototipagem e Testes de Usabilidade
+    <button (click)="this.disciplinas.remove(mat1.value); title.value=''">
+      -
+    </button>
+  </li>
+
+  <li mat5>
+    Desenvolvimento para Dispositivos Móveis I
+    <button (click)="this.disciplinas.remove(mat1.value); title.value=''">
+      -
+    </button>
+  </li>
+
+  <li mat6>
+    Tópicos Especiais em Sistemas para Internet II
+    <button (click)="this.disciplinas.remove(mat1.value); title.value=''">
       -
     </button>
   </li>
