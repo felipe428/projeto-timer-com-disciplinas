@@ -1,22 +1,26 @@
 import { Injectable } from '@angular/core';
 
-interface Disciplinas {
-  title: string;
-}
-
 @Injectable()
 export class DisciplinasService {
-  list: Array<Disciplinas> = [];
+  materias: string[] = [
+    'Negócios e Marketing Eletrônicos',
+    'Desenvolvimento para Servidores II',
+    'Ingles V',
+    'Projeto de prototipagem e testes de Usabilidade',
+    'Desenvolvimento para dispositivos móveis I',
+    'Tópicos Especiais em Sistemas para Internet II',
+    'Projeto do trabalho de graduação em Sistemas'
+  ];
 
   constructor() {}
 
-  getList() {
-    return this.list;
-  }
   add(title: string) {
-    this.list.push({ title });
+    this.materias.push(title);
   }
   remove(index: number) {
-    this.list.splice(index, 1);
+    this.materias.splice(index, 1);
+  }
+  getList() {
+    return this.materias;
   }
 }
